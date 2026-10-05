@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8fc"><title>MediQueue — Bed Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section id="loginView" class="login-screen" hidden>
+    <div class="login-card"><div class="brand-mark large">✚</div><p class="eyebrow">STAFF PORTAL</p><h1>Welcome to MediQueue</h1><p class="muted">Sign in to manage beds and patient flow.</p>
+      <form id="loginForm"><label>Username<input id="username" required value="staff" autocomplete="username" placeholder="Enter username"></label><label>Password<input id="password" type="password" required value="demo123" autocomplete="current-password" placeholder="Enter password"></label><p id="loginError" class="form-error"></p><button class="button primary full">Sign in <span>→</span></button></form><p class="demo-hint">Demo access: <b>staff</b> / <b>demo123</b></p><p class="fineprint">Student prototype · Fictional data only</p>
+    </div><div class="login-aside"><div class="aside-orb orb-one"></div><div class="aside-orb orb-two"></div><span class="aside-tag">SMART BED FLOW</span><h2>The right bed,<br>at the right time.</h2><p>Priority-led patient flow, designed to help teams see capacity clearly.</p><div class="mini-stat"><span class="pulse"></span> Queue is ready <b>● Live demo</b></div></div>
+  </section>
+  <div id="app" class="app-shell" hidden>
+    <aside class="sidebar" id="sidebar"><div class="brand"><div class="brand-mark">✚</div><div><strong>MediQueue</strong><small>CARE FLOW SYSTEM</small></div><button id="closeNav" class="icon-button mobile-close" aria-label="Close menu">×</button></div>
+      <div class="nav-caption">WORKSPACE</div><nav id="navigation">
+        <button class="nav-item active" data-page="dashboard"><span>◫</span>Dashboard</button>
+        <button class="nav-item" data-page="queue"><span>☷</span>Waiting Queue <i id="navQueueCount">0</i></button>
+        <button class="nav-item" data-page="beds"><span>▦</span>Bed Management</button>
+        <button class="nav-item" data-page="admissions"><span>♧</span>Admissions</button>
+        <button class="nav-item" data-page="patients"><span>♙</span>Patient Search</button>
+        <button class="nav-item" data-page="history"><span>◷</span>History</button>
+        <div class="nav-caption lower">LEARN</div><button class="nav-item" data-page="visualization"><span>⌘</span>DSA Visualization</button>
+      </nav><div class="sidebar-bottom"><div class="prototype-note"><span>ⓘ</span><p><b>Student prototype</b><br>Use fictional demo data only.</p></div><button id="logoutButton" class="nav-item logout"><span>↪</span>Sign out</button></div>
+    </aside><div id="scrim" class="scrim"></div>
+    <main class="main-area"><header class="topbar"><button id="menuButton" class="icon-button menu-button" aria-label="Open menu">☰</button><div class="crumb"><span>Workspace</span><b>/</b><strong id="pageCrumb">Dashboard</strong></div><div class="top-actions"><span class="today" id="today"></span><div class="avatar">SM</div><div class="staff"><b>Staff Member</b><small>Ward coordinator</small></div><button id="topLogout" class="icon-button logout-small" title="Sign out">↪</button></div></header>
+      <div class="content" id="content"></div><footer>MEDIQUEUE STUDENT DEMO <span>•</span> Not for clinical use</footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div><dialog id="modal" class="modal"></dialog>
+  <script src="app.js"></script>
+</body></html>

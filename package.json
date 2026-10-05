@@ -1,0 +1,9 @@
+{
+  "name": "mediqueue-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Student PBL demo for priority-led bed queue management",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "express": "^4.21.2", "mysql2": "^3.14.0" }
+}
